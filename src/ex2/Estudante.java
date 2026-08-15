@@ -35,4 +35,16 @@ public class Estudante {
     public double[] getNotas() {
         return this.notas;
     }
+
+    public double menorNota() {
+        double menor = this.notas[0];
+        int slave;
+
+        for (slave = 0; slave < 5; slave++) {
+            if (this.notas[slave] < menor) {
+                menor = this.notas[slave];
+            }
+        }
+        return menor;
+    }
 }
