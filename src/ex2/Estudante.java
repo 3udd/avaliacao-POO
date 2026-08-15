@@ -19,4 +19,13 @@ public class Estudante {
             this.notas[slave] = scanner.nextDouble();
         }
     }
+
+    public double calculaMedia() {
+        double soma=0;
+
+        for (double nota : this.notas) {
+            soma = soma + nota;
+        }
+        return soma / this.notas.length;
+    }
 }
