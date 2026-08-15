@@ -28,4 +28,11 @@ public class Estudante {
         }
         return soma / this.notas.length;
     }
+
+    public String getNome() {
+        return this.nome;
+    }
+    public double[] getNotas() {
+        return this.notas;
+    }
 }
