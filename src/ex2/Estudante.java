@@ -15,7 +15,7 @@ public class Estudante {
         int slave;
 
         for (slave = 0; slave < 5; slave++) {
-            System.out.println("Digite a " + slave++ + "ª nota do estudante " + this.nome + ": ");
+            System.out.println("Digite a " + (slave+1) + "ª nota do estudante " + this.nome + ": ");
             this.notas[slave] = scanner.nextDouble();
         }
     }
