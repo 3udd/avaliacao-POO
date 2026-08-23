@@ -7,4 +7,8 @@ public class Periodico extends Publicacao {
         super(titulo);
         this.volume = volume;
     }
+
+    public int getVolume() {
+        return this.volume;
+    }
 }
