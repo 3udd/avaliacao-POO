@@ -17,4 +17,14 @@ public class Livro extends Publicacao {
             System.out.println("O livro '" + getTitulo() + "' já foi emprestado");
         }
     }
+
+    public void devolver() {
+        if (!this.disponivel) {
+            this.disponivel = false;
+            System.out.println("Livro '" + getTitulo() + "' devolvido com sucesso");
+        }
+        else {
+            System.out.println("O livro '" + getTitulo() + "' já estava disponível");
+        }
+    }
 }
