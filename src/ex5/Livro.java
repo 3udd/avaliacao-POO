@@ -27,4 +27,8 @@ public class Livro extends Publicacao {
             System.out.println("O livro '" + getTitulo() + "' já estava disponível");
         }
     }
+
+    public boolean isDisponivel() {
+        return this.disponivel;
+    }
 }
