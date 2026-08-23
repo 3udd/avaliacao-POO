@@ -20,13 +20,19 @@ public class Estudante {
         }
     }
 
-    public double calculaMedia() {
-        double soma=0;
-
-        for (double nota : this.notas) {
-            soma = soma + nota;
+    public double calculaMedia(int[] pesos) {
+        if (pesos.length != 5) {
+            throw new IllegalArgumentException("Precisa de exatamente 5 pesos");
         }
-        return soma / this.notas.length;
+
+        double somaPond=0;
+        int somaPe=0, slave;
+
+        for (slave=0; slave<5; slave++) {
+            somaPond += this.notas[slave] * pesos[slave];
+            somaPe += pesos[slave];
+        }
+        return somaPond / somaPe;
     }
 
     public String getNome() {
